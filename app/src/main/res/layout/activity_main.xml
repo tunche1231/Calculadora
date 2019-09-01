@@ -9,26 +9,103 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/divider25"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#FFFFFF" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#C9B702"
+            android:layout_weight="0.78"
+            android:background="#FFFFFF"
             android:gravity="center"
             android:orientation="horizontal">
+
+            <View
+                android:id="@+id/divider22"
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/resultado3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#000000"
+                    android:textSize="@android:dimen/app_icon_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/resultado4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#000000"
+                    android:textSize="@android:dimen/app_icon_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/resultado2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#000000"
+                    android:textSize="@android:dimen/app_icon_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/resultado"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:gravity="center"
-                android:textAlignment="viewEnd"
-                android:textColor="#00E676"
-                android:textSize="36sp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="@android:dimen/app_icon_size"
                 android:textStyle="bold" />
+
+            <View
+                android:id="@+id/divider23"
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
+
         </LinearLayout>
+
+        <View
+            android:id="@+id/divider31"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#FFFFFF" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,15 +114,31 @@
             android:background="#D3000000"
             android:orientation="horizontal">
 
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
+
             <Button
-                android:id="@+id/btn9"
+                android:id="@+id/btn7"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#4B4B4B"
-                android:text="9"
-                android:textColor="#00E676"
-                android:textSize="30sp" />
+                android:foregroundGravity="center"
+                android:text="7"
+                android:textAlignment="center"
+                android:textColor="#FFC400"
+                android:textSize="@android:dimen/app_icon_size" />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
 
             <Button
                 android:id="@+id/btn8"
@@ -54,29 +147,56 @@
                 android:layout_weight="1"
                 android:backgroundTint="#4B4B4B"
                 android:text="8"
-                android:textColor="#00E676"
-                android:textSize="30sp" />
+                android:textColor="#FFC400"
+                android:textSize="@android:dimen/app_icon_size" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
 
             <Button
-                android:id="@+id/btn7"
+                android:id="@+id/btn9"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#4B4B4B"
-                android:text="7"
-                android:textColor="#00E676"
-                android:textSize="30sp" />
+                android:text="9"
+                android:textColor="#FFC400"
+                android:textSize="@android:dimen/app_icon_size" />
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
 
             <Button
                 android:id="@+id/sumar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="#C9B702"
+                android:backgroundTint="#868686"
                 android:text="+"
                 android:textColor="#272727"
-                android:textSize="50sp" />
+                android:textSize="@android:dimen/app_icon_size" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
         </LinearLayout>
+
+        <View
+            android:id="@+id/divider32"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#FFFFFF" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -85,25 +205,12 @@
             android:background="#D3000000"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btn6"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="#4B4B4B"
-                android:text="6"
-                android:textColor="#00E676"
-                android:textSize="30sp" />
-
-            <Button
-                android:id="@+id/btn5"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="#4B4B4B"
-                android:text="5"
-                android:textColor="#00E676"
-                android:textSize="30sp" />
+            <View
+                android:id="@+id/divider7"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
 
             <Button
                 android:id="@+id/btn4"
@@ -112,19 +219,73 @@
                 android:layout_weight="1"
                 android:backgroundTint="#4B4B4B"
                 android:text="4"
-                android:textColor="#00E676"
-                android:textSize="30sp" />
+                android:textColor="#FFC400"
+                android:textSize="@android:dimen/app_icon_size" />
+
+            <View
+                android:id="@+id/divider8"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#4B4B4B"
+                android:text="5"
+                android:textColor="#FFC400"
+                android:textSize="@android:dimen/app_icon_size" />
+
+            <View
+                android:id="@+id/divider9"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#4B4B4B"
+                android:text="6"
+                android:textColor="#FFC400"
+                android:textSize="@android:dimen/app_icon_size" />
+
+            <View
+                android:id="@+id/divider10"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
 
             <Button
                 android:id="@+id/restar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="#C9B702"
+                android:backgroundTint="#868686"
                 android:text="-"
                 android:textColor="#272727"
-                android:textSize="50sp" />
+                android:textSize="@android:dimen/app_icon_size" />
+
+            <View
+                android:id="@+id/divider11"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
         </LinearLayout>
+
+        <View
+            android:id="@+id/divider33"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#FFFFFF" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -133,25 +294,12 @@
             android:background="#D3000000"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btn3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="#4B4B4B"
-                android:text="3"
-                android:textColor="#00E676"
-                android:textSize="30sp" />
-
-            <Button
-                android:id="@+id/btn2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="#4B4B4B"
-                android:text="2"
-                android:textColor="#00E676"
-                android:textSize="30sp" />
+            <View
+                android:id="@+id/divider12"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
 
             <Button
                 android:id="@+id/btn1"
@@ -160,19 +308,73 @@
                 android:layout_weight="1"
                 android:backgroundTint="#4B4B4B"
                 android:text="1"
-                android:textColor="#00E676"
-                android:textSize="30sp" />
+                android:textColor="#FFC400"
+                android:textSize="@android:dimen/app_icon_size" />
+
+            <View
+                android:id="@+id/divider13"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#4B4B4B"
+                android:text="2"
+                android:textColor="#FFC400"
+                android:textSize="@android:dimen/app_icon_size" />
+
+            <View
+                android:id="@+id/divider14"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#4B4B4B"
+                android:text="3"
+                android:textColor="#FFC400"
+                android:textSize="@android:dimen/app_icon_size" />
+
+            <View
+                android:id="@+id/divider15"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
 
             <Button
                 android:id="@+id/multiplicar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="#C9B702"
+                android:backgroundTint="#868686"
                 android:text="*"
                 android:textColor="#272727"
-                android:textSize="50sp" />
+                android:textSize="@android:dimen/app_icon_size" />
+
+            <View
+                android:id="@+id/divider16"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
         </LinearLayout>
+
+        <View
+            android:id="@+id/divider34"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#FFFFFF" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -181,15 +383,29 @@
             android:background="#D3000000"
             android:orientation="horizontal">
 
+            <View
+                android:id="@+id/divider17"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
+
             <Button
                 android:id="@+id/limpiar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="#C9B702"
+                android:backgroundTint="#F8D203"
                 android:text="C"
                 android:textColor="#272727"
-                android:textSize="50sp" />
+                android:textSize="@android:dimen/app_icon_size" />
+
+            <View
+                android:id="@+id/divider18"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
 
             <Button
                 android:id="@+id/btn0"
@@ -198,30 +414,57 @@
                 android:layout_weight="1"
                 android:backgroundTint="#4B4B4B"
                 android:text="0"
-                android:textColor="#00E676"
-                android:textSize="30sp" />
+                android:textColor="#FFC400"
+                android:textSize="@android:dimen/app_icon_size" />
+
+            <View
+                android:id="@+id/divider19"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
 
             <Button
                 android:id="@+id/respuesta"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="#C9B702"
+                android:backgroundTint="#F8D203"
                 android:text="="
                 android:textAllCaps="false"
                 android:textColor="#272727"
-                android:textSize="50sp" />
+                android:textSize="@android:dimen/app_icon_size" />
+
+            <View
+                android:id="@+id/divider20"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
 
             <Button
                 android:id="@+id/dividir"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="#C9B702"
+                android:backgroundTint="#868686"
                 android:text="/"
                 android:textColor="#272727"
-                android:textSize="50sp" />
+                android:textSize="@android:dimen/app_icon_size" />
+
+            <View
+                android:id="@+id/divider21"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:foregroundGravity="center" />
         </LinearLayout>
+
+        <View
+            android:id="@+id/divider26"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#FFFFFF" />
 
     </LinearLayout>
 

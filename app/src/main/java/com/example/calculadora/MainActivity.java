@@ -11,8 +11,12 @@ public class MainActivity extends AppCompatActivity {
     Button[] botones_numeros = new Button[10];
     Button[] botones_operacion = new Button[4];
     Button igual;
+    Button limpiar;
     int operacion;
     TextView display;
+    TextView display2;
+    TextView display3;
+    TextView display4;
     String str_display = "";
     int operando1 = 0;
 
@@ -21,7 +25,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         display = findViewById(R.id.resultado);
+        display2 = findViewById(R.id.resultado2);
+        display3 = findViewById(R.id.resultado3);
+        display4 = findViewById(R.id.resultado4);
         igual = findViewById(R.id.respuesta);
+        limpiar = findViewById(R.id.limpiar);
         AsignarBotones();
         AsignarEventos();
     }
@@ -53,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     str_display += finalI;
                     display.setText(str_display);
+                    display2.setText(str_display);
+                    display.setText("");
                 }
             });
         }
@@ -62,10 +72,37 @@ public class MainActivity extends AppCompatActivity {
             botones_operacion[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+
                     EjecutarOperacion();
+                    display3.setText(str_display);
+                    display2.setText("");
+                    display3.setText("");
+                    display4.setText("");
+                    display3.setText(str_display);
+                    if (operacion == 0) {
+                        display4.setText(" + ");
+                    }else if (operacion == 1) {
+                        display4.setText(" - ");
+                    }else if (operacion == 2) {
+                        display4.setText(" * ");
+                    }else if (operacion == 3) {
+                        display4.setText(" / ");
+                    }
+                    display4.setText("");
+
                     operando1 = Integer.parseInt(str_display);
                     operacion = finalI;
                     str_display = "";
+
+                    if (operacion == 0) {
+                        display4.setText(" + ");
+                    }else if (operacion == 1) {
+                        display4.setText(" - ");
+                    }else if (operacion == 2) {
+                        display4.setText(" * ");
+                    }else if (operacion == 3) {
+                        display4.setText(" / ");
+                    }
                 }
             });
         }
@@ -77,21 +114,39 @@ public class MainActivity extends AppCompatActivity {
                 EjecutarOperacion();
             }
         });
+        limpiar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                operando1 = 0 * Integer.parseInt(str_display);
+                str_display = String.valueOf(operando1);
+                display.setText(str_display);
+                operando1 = 0;
+                display2.setText("");
+                display3.setText("");
+                display4.setText("");
+            }
+        });
     }
 
     void EjecutarOperacion(){
-        if ( operando1 != 0 && !str_display.equals("")) {
+        if (operando1 != 0 && !str_display.equals("")) {
             if (operacion == 0) {
                 operando1 = operando1 + Integer.parseInt(str_display);
-            }else if (operacion == 1) {
+                display4.setText(" + ");
+            } else if (operacion == 1) {
                 operando1 = operando1 - Integer.parseInt(str_display);
-            }else if (operacion == 2) {
+                display4.setText(" - ");
+            } else if (operacion == 2) {
                 operando1 = operando1 * Integer.parseInt(str_display);
-            }else if (operacion == 3) {
+                display4.setText(" * ");
+            } else if (operacion == 3) {
                 operando1 = operando1 / Integer.parseInt(str_display);
+                display4.setText(" / ");
             }
+            display2.setText(str_display);
+
             str_display = String.valueOf(operando1);
-            display.setText(str_display);
+            display.setText("= " + str_display);
             operando1 = 0;
         }
     }
